@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package restaurants;
+
+message KeywordRequest {
+  string keyword = 1;
+}
+
+message UUIDRequest {
+  string uuid = 1;
+}
+
+message RestaurantRequest {
+  string name = 1;
+}
+
+message RestaurantDetail {
+  string uuid = 1;
+  string name = 2;
+}
+
+message RestaurantsResponse {
+  repeated RestaurantDetail list = 1;
+}
+
+service RestaurantService {
+  rpc Create(RestaurantRequest) returns (RestaurantDetail) {}
+  rpc ReadByKeyword(KeywordRequest) returns (RestaurantsResponse) {}
+  rpc ReadByUUID(UUIDRequest) returns (RestaurantDetail) {}
+  rpc UpdateByUUID(RestaurantDetail) returns (RestaurantDetail) {}
+  rpc DeleteByKeyword(KeywordRequest) returns (RestaurantsResponse) {}
+  rpc DeleteByUUID(UUIDRequest) returns (RestaurantDetail) {}
+}

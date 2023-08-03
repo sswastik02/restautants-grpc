@@ -8,11 +8,11 @@ npm install
 
 ## Run
 1. Assign the environment variables by using the file `.env.example`
-```
-cp .env .env.example
+```sh
+cp .env.example .env # add the required values
 ```
 2. Start the server
-```
+```sh
 npm start
 ```
 

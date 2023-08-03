@@ -7,7 +7,11 @@ npm install
 ```
 
 ## Run
-1. Start the server
+1. Assign the environment variables by using the file `.env.example`
+```
+cp .env .env.example
+```
+2. Start the server
 ```
 npm start
 ```

@@ -15,3 +15,6 @@ cp .env .env.example
 ```
 npm start
 ```
+
+## Usage
+[API Documentation](./docs/)
